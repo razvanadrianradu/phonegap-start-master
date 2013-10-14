@@ -39,19 +39,18 @@
             app.initialize();
       
         
-      
-      function snack (bramd, size, calories){
-this.brand = brand;
-this.size = size;
-this.calories = calories;
+      function Book(title, author, ISBN) {
+this.title = title;
+this.author = author;
+this.ISBN = ISBN;
 }
-var mars = new snack(
-"mars", "58g", "260cal");
+var book = new Book(
+‘A lovely book’, ‘I. Write’, ‘21547121514’);
+window.localStorage.setItem(“book”, JSON.stringify(book));
+var retrieved_book =
+JSON.parse(window.localStorage.getItem(“book”));
 
-window.localStorage.setItem("snack" , JSON.stringify("snack"));
-var retrieved_snack =
-JSON.parse(window.localStorage.getItem("snack"));
-  alert (retrieved_snack);
+alert (retrieved_book);
   </script>
     </body>
 </html>
