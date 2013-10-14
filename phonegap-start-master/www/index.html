@@ -37,8 +37,9 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
+      </script>
       
-        
+        <script>
       function Book(title, author, ISBN) {
 this.title = title;
 this.author = author;
@@ -46,9 +47,9 @@ this.ISBN = ISBN;
 }
 var book = new Book(
 ‘A lovely book’, ‘I. Write’, ‘21547121514’);
-window.localStorage.setItem(“book”, JSON.stringify(book));
+window.localStorage.setItem(“book”, JSON.stringify("book"));
 var retrieved_book =
-JSON.parse(window.localStorage.getItem(“book”));
+JSON.parse(window.localStorage.getItem("book"));
 
 alert (retrieved_book);
   </script>
