@@ -40,6 +40,7 @@
       </script>
       
         <script>
+
       function Book(title, author, ISBN) {
 this.title = title;
 this.author = author;
@@ -52,6 +53,53 @@ var retrieved_book =
 JSON.parse(window.localStorage.getItem('book'));
 
 alert (retrieved_book);
+
+var db = window.openDatabase(
+‘example_db’,
+‘1.0’,
+‘foods_db’,
+2048);
+
+CREATE TABLE Nutrition
+(
+
+Mars varchar(255),
+Snickers varchar(255),
+Popcorn varchar(255),
+Cips varchar(255)
+);
+
+db.transaction(
+doTransaction, onError, onSuccess);
+
+function doTransaction{
+    
+}
+    alert ("Transaction in progress");
+}
+
+function onError{
+    
+}
+    alert ("Error");
+}
+function onSuccess{
+    
+}
+    alert ("Success");
+}
+
   </script>
+  
+  <script>
+function load()
+{
+alert("Page is loaded");
+}
+</script>
+</head>
+
+<body onload="load()">
+<h1>Hello World!</h1>
     </body>
 </html>
