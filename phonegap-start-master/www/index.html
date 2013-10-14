@@ -49,9 +49,7 @@
 
   alert (file);
       
-      function snack(bramd, size, calories)
-  
-{
+      function snack (bramd, size, calories){
 this.brand = brand;
 this.size = size;
 this.calories = calories;
@@ -59,7 +57,7 @@ this.calories = calories;
 var mars = new snack(
 "mars", "58g", "260cal");
 
-window.localStorage.setItem("snack" , JSON.stringify(snack));
+window.localStorage.setItem("snack" , JSON.stringify("snack"));
 var retrieved_snack =
 JSON.parse(window.localStorage.getItem("snack"));
   alert (retrieved_snack);
